@@ -1,0 +1,81 @@
+.inputform {
+    margin: 35px auto;
+    padding: 17px;
+    padding-top: 45px;
+    background-image: linear-gradient(to right bottom, rgba(128, 6, 88, 0.851), rgba(4, 66, 198, 0.632));
+
+}
+
+.inputform label {
+    font-family: 'Rubik';
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+
+}
+
+.grid {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 20px;
+
+}
+
+.grid--2-cols {
+    /*  grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    align-items: center;
+}
+
+
+.mainform label {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mainform input {
+    font-size: 15px;
+    font-weight: 200;
+    width: 90%;
+    height: 30px;
+    border-radius: 7px;
+    padding: 7px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none;
+
+}
+
+.mainform input:active {
+    border: none;
+}
+
+.mainform input::placeholder {
+    color: #aaa;
+}
+
+.mainform *:focus {
+
+    box-shadow: 0 0 0 0.3rem rgba(245, 238, 238, 0.582);
+}
+
+.container {
+
+    margin: 17px;
+    display: flex;
+    justify-content: center;
+}
+
+.heading-primary {
+    font-family: 'Rubik';
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 12px 18px;
+    background-color: rgb(231, 72, 72);
+
+
+}

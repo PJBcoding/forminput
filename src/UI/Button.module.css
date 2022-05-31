@@ -1,0 +1,25 @@
+.button {
+    color: rgba(13, 43, 175, 0.915);
+    text-transform: uppercase;
+    width: 80px;
+    background-color: rgb(179, 215, 31);
+    text-align: center;
+    padding: 15px 47px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.501);
+}
+
+.button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.501);
+}
+
+.fromtop {
+    margin-top: 90px;
+}
