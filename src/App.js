@@ -1,10 +1,43 @@
 import './App.css';
+import React, { useState } from 'react';
 import Form from "../src/Components/Form";
+import Styles from "../src/Components/Form.module.css";
+import Card from "./UI/Card";
+import UserRecords from './Components/UserRecords';
+
 function App() {
+
+  const user_record_initial = [];
+  const [user_record, setUser_Record] = useState(user_record_initial);
+
+  const [userShow, setuserShow] = useState(false);
+
+  const getshowuserstatus = (val) => {
+    setuserShow(val);
+    console.log("................" + val)
+  }
+
+  const submit_save = (new_records) => {
+
+
+    setUser_Record((prevRecords) => {
+      return ([new_records, ...prevRecords]);
+
+      /* 
+           prevRecords.push(new_records);
+           return [...prevRecords];  
+       
+       // Need to return the array like this  [...prevRecords] because react will not rerender the UserRecord component if we only return prevRecords although this also is an array.
+       
+       */
+    })
+  }
   return (
-    <>
-      <Form />
-    </>
+    <Card className={Styles.inputform}>
+      <Form onSubmitSaveData={submit_save} showusersst={getshowuserstatus} />
+      <UserRecords showuser={userShow} userdata={user_record} />
+    </Card >
+
   );
 }
 

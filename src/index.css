@@ -3,6 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Rubik', sans-serif;
+  background-color: rgb(88, 12, 78);
 }
 
 code {
