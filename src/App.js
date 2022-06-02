@@ -10,12 +10,19 @@ function App() {
   const user_record_initial = [];
   const [user_record, setUser_Record] = useState(user_record_initial);
 
-  const [userShow, setuserShow] = useState(false);
+  const [userShow, setuserShow] = useState(true);
+
 
   const getshowuserstatus = (val) => {
     setuserShow(val);
     console.log("................" + val)
   }
+
+
+  const after_deletion_user_record = (val) => {
+    setUser_Record(val);
+  }
+
 
   const submit_save = (new_records) => {
 
@@ -34,8 +41,10 @@ function App() {
   }
   return (
     <Card className={Styles.inputform}>
-      <Form onSubmitSaveData={submit_save} showusersst={getshowuserstatus} />
-      <UserRecords showuser={userShow} userdata={user_record} />
+      <Form onSubmitSaveData={submit_save} showusersstatus={getshowuserstatus} />
+      {userShow && <></>}
+      {!userShow && <UserRecords userdata={user_record} after_deletion_user_record={after_deletion_user_record} />}
+
     </Card >
 
   );

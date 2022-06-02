@@ -60,13 +60,13 @@ const Form = (props) => {
     const showUsers = () => {
         if (show_Users === false) {
             setshowUsers(true);
-            setbuttonname("Hide  Users")
+            setbuttonname("Hide Users")
         }
         else {
             setshowUsers(false);
             setbuttonname("Show Users")
         }
-        props.showusersst(show_Users)
+        props.showusersstatus(show_Users)
     }
     /////////////////////////////////////////////////////////////////////////////
 

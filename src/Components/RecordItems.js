@@ -3,8 +3,14 @@ import Styles from './RecordItems.module.css'
 
 
 const RecordItems = (props) => {
+
+
+    const itemcardClickHandler = () => {
+        console.log('Props .id is : ' + props.id);
+        props.getdeleted_id(props.id);
+    }
     return (
-        <div className={Styles.itemcard}>
+        <div className={Styles.itemcard} onClick={itemcardClickHandler}>
             <div className={Styles.itemcarditem}>
                 <div> <label htmlFor="name" >Name : </label> <span>  {props.name}</span></div>
                 <div> <label htmlFor="age">Age  : </label> <span>  {props.age}</span></div>
